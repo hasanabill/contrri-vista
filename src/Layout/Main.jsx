@@ -5,7 +5,6 @@ import "./Main.css";
 const Main = () => {
   return (
     <div className="main-bg">
-      <Navbar></Navbar>
       <Outlet></Outlet>
     </div>
   );

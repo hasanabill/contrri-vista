@@ -1,0 +1,46 @@
+/* ProjectShowcase.css */
+
+/* Style the overall container */
+.project-showcase {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0rem;
+  width: 100%;
+}
+
+/* Style the header section */
+.project-container {
+  margin-top: 1.5rem;
+  width: 75%;
+}
+.project-container a {
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.search-bar input {
+  width: 90%;
+  height: 2.22rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.create {
+  padding: 3px 10px;
+  border: 2px solid #6367c9;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 0.2rem;
+  width: 10%;
+}
