@@ -5,6 +5,8 @@ import "./index.css";
 import { RouterProvider } from "react-router-dom";
 
 import { router } from "./Routes/Routes";
+import "mdb-react-ui-kit/dist/css/mdb.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
