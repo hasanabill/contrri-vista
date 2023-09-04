@@ -19,7 +19,7 @@ const Navbar2 = () => {
               </Link>
             </li>
             <li>
-              <Link to="/stories" className="link">
+              <Link to="/participate" className="link">
                 Stories
               </Link>
             </li>

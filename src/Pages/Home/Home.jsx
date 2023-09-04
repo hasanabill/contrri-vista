@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import Navbar from "../Shared/Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -11,8 +12,12 @@ const Home = () => {
           <h1>Welcome to Open Science & Open Source Showcase</h1>
           <p>Discover and contribute to amazing projects!</p>
           <div className="home-buttons">
-            <button className="home-button1">Create History</button>
-            <button className="home-button2">Contribute</button>
+            <Link to="/participate">
+              <button className="home-button1">Create History</button>
+            </Link>
+            <Link to="/participate">
+              <button className="home-button2">Contribute</button>
+            </Link>
           </div>
         </div>
       </div>

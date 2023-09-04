@@ -11,25 +11,29 @@ const Navbar = () => {
         <Link to="/">
           <img src={logo} style={{ maxWidth: "6rem" }} />
         </Link>
-        <div className="flex items-center space-x-4">
-          <ul className="flex space-x-4">
+        <div className="nav-div">
+          <ul className="nav-ui">
             <li>
               <Link to="/participate" className="link">
                 Participate
               </Link>
             </li>
             <li>
-              <Link to="/stories" className="link">
+              <Link to="/participate" className="link">
                 Stories
               </Link>
             </li>
+            <li>
+              <Link to="/signin">
+                <button className="link">Sign In</button>
+              </Link>
+            </li>
+            <li>
+              <Link to="/signup">
+                <button className="signin-button">Sign Up</button>
+              </Link>
+            </li>
           </ul>
-          <Link to="/signin">
-            <button className="link">Sign In</button>
-          </Link>
-          <Link to="/signup">
-            <button className="signin-button">Sign Up</button>
-          </Link>
         </div>
       </div>
     </nav>
