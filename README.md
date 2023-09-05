@@ -2,6 +2,8 @@
 
 Welcome to Contri Vista, the ultimate platform for showcasing and contributing to Open Science and Open Source Projects. Contri Vista is designed to not only facilitate collaboration but also make contributing fun and rewarding. With features like XP points, badges, and a leveling system, you can track your progress and show off your skills to the community.
 
+Visit our website: [Contri Vista](https://contri-vista.web.app/)
+
 ## Table of Contents
 
 - [Features](#features)
@@ -92,4 +94,4 @@ We welcome contributions from the community to make Contri Vista even better. If
 
 Contri Vista is open-source software licensed under the [MIT License](LICENSE). Feel free to use and modify the codebase according to your needs. Your contributions to the project are also appreciated.
 
-Thank you for choosing Contri Vista. Let's make open science and open source more fun and rewarding together!
+Thank you for choosing Contri Vista. Let's make open science and open source more fun and rewarding together! Visit our website at [Contri Vista](https://contri-vista.web.app/) to get started.
