@@ -1,8 +1,8 @@
-# Contri Vista - Open Science and Open Source Showcase Platform
+# Contrri Vista - Open Science and Open Source Showcase Platform
 
-Welcome to Contri Vista, the ultimate platform for showcasing and contributing to Open Science and Open Source Projects. Contri Vista is designed to not only facilitate collaboration but also make contributing fun and rewarding. With features like XP points, badges, and a leveling system, you can track your progress and show off your skills to the community.
+Welcome to Contrri Vista, the ultimate platform for showcasing and contributing to Open Science and Open Source Projects. Contrri Vista is designed to not only facilitate collaboration but also make contributing fun and rewarding. With features like XP points, badges, and a leveling system, you can track your progress and show off your skills to the community.
 
-Visit our website: [Contri Vista](https://contri-vista.web.app/)
+Visit our website: [Contrri Vista](https://contrri-vista.web.app/)
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@ Visit our website: [Contri Vista](https://contri-vista.web.app/)
 
 ### XP Points
 
-Contri Vista rewards you with XP (Experience Points) for contributing to projects. The more you contribute, the more XP you earn. Show off your dedication and expertise by accumulating XP on your profile.
+Contrri Vista rewards you with XP (Experience Points) for contributing to projects. The more you contribute, the more XP you earn. Show off your dedication and expertise by accumulating XP on your profile.
 
 ### Badges
 
@@ -40,18 +40,18 @@ Visitors to your profile can easily gauge your skills and contributions by viewi
 
 ## Getting Started
 
-To get started with Contri Vista, follow these steps:
+To get started with Contrri Vista, follow these steps:
 
 1. Clone the repository to your local machine.
 
    ```
-   git clone https://github.com/hasanabill/contri-vista
+   git clone https://github.com/hasanabill/contrri-vista
    ```
 
 2. Navigate to the project directory.
 
    ```
-   cd contri-vista
+   cd contrri-vista
    ```
 
 3. Install the necessary dependencies.
@@ -72,7 +72,7 @@ To get started with Contri Vista, follow these steps:
 
 ## Usage
 
-1. **Create an Account**: Sign up for a Contri Vista account to start tracking your contributions and earning XP.
+1. **Create an Account**: Sign up for a Contrri Vista account to start tracking your contributions and earning XP.
 
 2. **Browse Projects**: Explore the platform to discover Open Science and Open Source projects that interest you.
 
@@ -84,14 +84,14 @@ To get started with Contri Vista, follow these steps:
 
 6. **Showcase Your Projects**: Create a profile and showcase your own projects for others to discover and collaborate on.
 
-7. **Connect with the Community**: Engage with the Contri Vista community, collaborate with others, and grow your skills.
+7. **Connect with the Community**: Engage with the Contrri Vista community, collaborate with others, and grow your skills.
 
 ## Contributing
 
-We welcome contributions from the community to make Contri Vista even better. If you'd like to contribute, please follow our [Contribution Guidelines](CONTRIBUTING.md).
+We welcome contributions from the community to make Contrri Vista even better. If you'd like to contribute, please follow our [Contribution Guidelines](CONTRIBUTING.md).
 
 ## License
 
-Contri Vista is open-source software licensed under the [MIT License](LICENSE). Feel free to use and modify the codebase according to your needs. Your contributions to the project are also appreciated.
+Contrri Vista is open-source software licensed under the [MIT License](LICENSE). Feel free to use and modify the codebase according to your needs. Your contributions to the project are also appreciated.
 
-Thank you for choosing Contri Vista. Let's make open science and open source more fun and rewarding together! Visit our website at [Contri Vista](https://contri-vista.web.app/) to get started.
+Thank you for choosing Contrri Vista. Let's make open science and open source more fun and rewarding together! Visit our website at [Contrri Vista](https://contri-vista.web.app/) to get started.
