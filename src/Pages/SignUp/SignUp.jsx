@@ -1,7 +1,21 @@
 import React, { useState } from "react";
 import Navbar from "../Shared/Navbar/Navbar";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from "../../firebase/firebase.init";
 
 const SignUpForm = () => {
+  const auth = getAuth(app);
+
+  const provider = new GoogleAuthProvider();
+
+  const handleGoogleSignIn = () => {
+    signInWithPopup(provider, auth)
+      .then((result) => {
+        const user = result.user;
+      })
+      .catch((err) => console.log(err));
+  };
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -23,8 +37,9 @@ const SignUpForm = () => {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col items-center justify-center min-h-screen">
-        <div className="max-w-md mx-auto mt-3 p-6 bg-white bg-opacity-80 rounded-lg shadow-lg">
+      <div style={{ height: "100vh" }}>
+        <div className="max-w-md mx-auto mt-8 p-6 bg-indigo-200 bg-opacity-80 rounded-lg shadow-lg">
+          <h2 className="text-2xl font-semibold mb-4">Sign Up</h2>
           <form onSubmit={handleFormSubmit}>
             <div className="mb-4">
               <label htmlFor="fullName" className="block text-gray-700">
@@ -36,7 +51,7 @@ const SignUpForm = () => {
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
+                className="w-full px-3 py-2 bg-indigo-200 rounded-md shadow-sm"
                 required
               />
             </div>
@@ -51,7 +66,7 @@ const SignUpForm = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
+                className="w-full px-3 py-2 bg-indigo-200 rounded-md shadow-sm "
                 required
               />
             </div>
@@ -65,7 +80,7 @@ const SignUpForm = () => {
                 name="password"
                 value={formData.password}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
+                className="w-full px-3 py-2 bg-indigo-200 rounded-md shadow-sm "
                 required
               />
             </div>
@@ -79,7 +94,7 @@ const SignUpForm = () => {
                 name="confirmPassword"
                 value={formData.confirmPassword}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
+                className="w-full px-3 py-2 bg-indigo-200 rounded-md shadow-sm "
                 required
               />
             </div>
@@ -93,13 +108,20 @@ const SignUpForm = () => {
                 name="fieldofInterest"
                 value={formData.fieldofInterest}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
+                className="w-full px-3 py-2 bg-indigo-200 rounded-md shadow-sm "
               ></input>
             </div>
             <button type="submit" className="signin-button w-full">
               Sign Up
             </button>
           </form>
+          <hr />
+          <button
+            onClick={() => handleGoogleSignIn()}
+            className=" signin-button w-full"
+          >
+            Continue With Google
+          </button>
         </div>
       </div>
     </>
