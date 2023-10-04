@@ -3,14 +3,11 @@ import Navbar from "../Shared/Navbar/Navbar";
 
 const SignUpForm = () => {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    fullName: "",
     email: "",
     password: "",
     confirmPassword: "",
-    role: "creator",
-    profilePicture: "",
-    address: "",
+    fieldofInterest: "",
   });
 
   const handleInputChange = (e) => {
@@ -21,43 +18,29 @@ const SignUpForm = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     console.log("Submitted Data:", formData);
-    // Perform sign-up logic here
   };
 
   return (
     <>
       <Navbar />
-      <div style={{ height: "100%" }}>
+      <div className="flex flex-col items-center justify-center min-h-screen">
         <div className="max-w-md mx-auto mt-3 p-6 bg-white bg-opacity-80 rounded-lg shadow-lg">
           <form onSubmit={handleFormSubmit}>
             <div className="mb-4">
-              <label htmlFor="firstName" className="block text-gray-700">
-                First Name:
+              <label htmlFor="fullName" className="block text-gray-700">
+                Full Name
               </label>
               <input
                 type="text"
-                id="firstName"
-                name="firstName"
-                value={formData.firstName}
+                id="fullName"
+                name="fullName"
+                value={formData.fullName}
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
                 required
               />
             </div>
-            <div className="mb-4">
-              <label htmlFor="lastName" className="block text-gray-700">
-                Last Name:
-              </label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleInputChange}
-                className="w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
-                required
-              />
-            </div>
+
             <div className="mb-4">
               <label htmlFor="email" className="block text-gray-700">
                 Email:
@@ -101,42 +84,14 @@ const SignUpForm = () => {
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="role" className="block text-gray-700">
-                Role:
-              </label>
-              <select
-                id="role"
-                name="role"
-                value={formData.role}
-                onChange={handleInputChange}
-                className="w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
-                required
-              >
-                <option value="creator">Creator</option>
-                <option value="contributor">Contributor</option>
-              </select>
-            </div>
-            <div className="mb-4">
-              <label htmlFor="profilePicture" className="block text-gray-700">
-                Profile Picture URL:
+              <label htmlFor="fieldofInterest" className="block text-gray-700">
+                Field Of Interest:
               </label>
               <input
                 type="text"
-                id="profilePicture"
-                name="profilePicture"
-                value={formData.profilePicture}
-                onChange={handleInputChange}
-                className="w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
-              />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="address" className="block text-gray-700">
-                Address:
-              </label>
-              <input
-                id="address"
-                name="address"
-                value={formData.address}
+                id="fieldofInterest"
+                name="fieldofInterest"
+                value={formData.fieldofInterest}
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
               ></input>
