@@ -8,6 +8,7 @@ import { experimentalStyled as styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2";
+import { Link } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -28,9 +29,9 @@ const ProjectShowcase = () => {
 
           <div className="search-bar">
             <input type="text" />
-            <button className="create">
+            <Link className="create" to="/createproject">
               Create <AddCircleIcon />{" "}
-            </button>
+            </Link>
           </div>
           <Box sx={{ flexGrow: 1 }} style={{ marginTop: "2rem" }}>
             <Grid
