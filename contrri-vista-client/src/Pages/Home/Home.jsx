@@ -12,7 +12,7 @@ const Home = () => {
           <h1>Welcome to Open Science & Open Source Showcase</h1>
           <p>Discover and contribute to amazing projects!</p>
           <div className="home-buttons">
-            <Link to="/participate">
+            <Link to="/createproject">
               <button className="home-button1">Create History</button>
             </Link>
             <Link to="/participate">

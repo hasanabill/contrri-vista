@@ -9,6 +9,7 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -19,6 +20,12 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const ProjectShowcase = () => {
+  const navigate = useNavigate();
+
+  // Function to navigate to a specific route
+  const navigateTo = () => {
+    navigate("/projectdetails"); // Use the navigate function to navigate to the specified route
+  };
   return (
     <>
       <Navbar2 />
@@ -46,6 +53,7 @@ const ProjectShowcase = () => {
                   ava="M"
                   color="#4CAF50"
                   img="https://scitechdaily.com/images/Multiple-Robots-NASA-Mars-Sample-Return-Mission-scaled.jpg"
+                  navigateTo={navigateTo}
                 />
               </Grid>
               <Grid item xs={12} sm={6} md={3}>
@@ -55,6 +63,7 @@ const ProjectShowcase = () => {
                   ava="J"
                   color="#E91E63"
                   img="https://www.k-state.edu/media/images/oct20/NASA-exploration-campaign.jpg"
+                  navigateTo={navigateTo}
                 />
               </Grid>
               <Grid item xs={12} sm={6} md={3}>
@@ -63,6 +72,7 @@ const ProjectShowcase = () => {
                   subheader="November 9, 2020"
                   ava="S"
                   color="#2196F3"
+                  navigateTo={navigateTo}
                   img="https://media2.spaceref.com/wp-content/uploads/2022/12/14114346/52561768616_13f76fc91d_k.jpg"
                 />
               </Grid>
@@ -72,6 +82,7 @@ const ProjectShowcase = () => {
                   subheader="April 4, 2016"
                   ava="N"
                   color="#FF9800"
+                  navigateTo={navigateTo}
                   img="https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/09/02/Pictures/night-stars-galaxy-mountains_52d2294c-ecb4-11ea-83c1-09a59be16170.jpg"
                 />
               </Grid>
@@ -89,8 +100,9 @@ const ProjectShowcase = () => {
                   title="Mission to the Asteroid Belt"
                   subheader="October 12, 2019"
                   ava="A"
+                  navigateTo={navigateTo}
                   color="#FF5722"
-                  img="https://www.nasa.gov/sites/default/files/s132e012209_sm.jpg"
+                  img="https://www.nasa.gov/wp-content/uploads/2015/03/top-image.jpg"
                 />
               </Grid>
               <Grid item xs={12} sm={6} md={3}>
@@ -98,6 +110,7 @@ const ProjectShowcase = () => {
                   title="Probing the Mysteries of Black Holes"
                   subheader="June 8, 2020"
                   ava="B"
+                  navigateTo={navigateTo}
                   color="#795548"
                   img="https://research.gatech.edu/sites/default/files/styles/news_first_image/public/news-images/22CLEVER_GRAPHIC_1%28300dpi%29_0.png?itok=iz8PA8N2"
                 />
@@ -107,6 +120,7 @@ const ProjectShowcase = () => {
                   title="Adventures on the Red Planet"
                   subheader="September 3, 2021"
                   ava="R"
+                  navigateTo={navigateTo}
                   color="#009688"
                   img="https://akm-img-a-in.tosshub.com/indiatoday/images/media_bank/202307/nuclear-rocket-270029-16x9.jpg?VersionId=scYxP9PaN2RaiXkjMpB42APIU1V5_a_Q"
                 />
