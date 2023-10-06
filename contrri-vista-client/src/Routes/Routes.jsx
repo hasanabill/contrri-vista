@@ -7,6 +7,9 @@ import SignIn from "../Pages/SignIn/SignIn";
 import ProfilePage from "../Pages/Profile/Profile";
 import CreateProject from "../Pages/CreateProject/CreateProject";
 import NasaProjects from "../Pages/NasaProjects/NasaProjects";
+import ProjectDetails from "../Pages/ProjectDetails/ProjectDetails";
+import Participants from "../Pages/Participants/Participants";
+import ChatBox from "../Pages/ChatBox/ChatBox";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +35,18 @@ export const router = createBrowserRouter([
       {
         path: "/createproject",
         element: <CreateProject />,
+      },
+      {
+        path: "/projectdetails",
+        element: <ProjectDetails />,
+      },
+      {
+        path: "/participants",
+        element: <Participants />,
+      },
+      {
+        path: "/chat",
+        element: <ChatBox />,
       },
       {
         path: "/signup",

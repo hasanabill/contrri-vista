@@ -14,6 +14,11 @@ const Navbar2 = () => {
         <div className="flex items-center space-x-4">
           <ul className="flex space-x-4">
             <li>
+              <Link to="/participants" className="link">
+                Participants
+              </Link>
+            </li>
+            <li>
               <Link to="/participate" className="link">
                 Participate
               </Link>
