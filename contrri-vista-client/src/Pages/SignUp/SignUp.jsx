@@ -39,7 +39,6 @@ const SignUpForm = () => {
       <Navbar />
       <div style={{ height: "100vh" }}>
         <div className="max-w-md mx-auto mt-8 p-6 bg-indigo-200 bg-opacity-80 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-semibold mb-4">Sign Up</h2>
           <form onSubmit={handleFormSubmit}>
             <div className="mb-4">
               <label htmlFor="fullName" className="block text-gray-700">

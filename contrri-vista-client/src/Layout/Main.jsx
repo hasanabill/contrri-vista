@@ -4,7 +4,7 @@ import Navbar from "../Pages/Shared/Navbar/Navbar";
 import "./Main.css";
 const Main = () => {
   return (
-    <div className="main-bg">
+    <div className="background-container">
       <Outlet></Outlet>
     </div>
   );
