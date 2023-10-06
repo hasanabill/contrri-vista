@@ -1,20 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../Shared/Navbar/Navbar";
-import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import {
+  GoogleAuthProvider,
+  getAuth,
+  signInWithPopup,
+  onAuthStateChanged,
+} from "firebase/auth";
 import app from "../../firebase/firebase.init";
 
 const SignUpForm = () => {
   const auth = getAuth(app);
-
   const provider = new GoogleAuthProvider();
-
-  const handleGoogleSignIn = () => {
-    signInWithPopup(provider, auth)
-      .then((result) => {
-        const user = result.user;
-      })
-      .catch((err) => console.log(err));
-  };
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -34,12 +30,40 @@ const SignUpForm = () => {
     console.log("Submitted Data:", formData);
   };
 
+  const handleGoogleSignIn = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+        console.log("Google Sign In Successful. User:", user);
+      })
+      .catch((err) => {
+        console.log("Google Sign In Error:", err);
+      });
+  };
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in.
+        console.log("User is signed in:", user);
+        // You can redirect to another page or perform other actions here.
+      } else {
+        // User is signed out.
+        console.log("User is signed out");
+      }
+    });
+
+    return () => {
+      // Unsubscribe the listener when the component unmounts.
+      unsubscribe();
+    };
+  }, [auth]);
+
   return (
     <>
       <Navbar />
       <div style={{ height: "100vh" }}>
         <div className="max-w-md mx-auto mt-8 p-6 bg-indigo-200 bg-opacity-80 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-semibold mb-4">Sign Up</h2>
           <form onSubmit={handleFormSubmit}>
             <div className="mb-4">
               <label htmlFor="fullName" className="block text-gray-700">
@@ -117,7 +141,7 @@ const SignUpForm = () => {
           </form>
           <hr />
           <button
-            onClick={() => handleGoogleSignIn()}
+            onClick={handleGoogleSignIn}
             className=" signin-button w-full"
           >
             Continue With Google
