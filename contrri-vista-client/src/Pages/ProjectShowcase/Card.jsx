@@ -26,7 +26,14 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function CardComponent({ title, subheader, ava, color, img }) {
+export default function CardComponent({
+  title,
+  subheader,
+  ava,
+  color,
+  img,
+  navigateTo,
+}) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -56,6 +63,7 @@ export default function CardComponent({ title, subheader, ava, color, img }) {
           facilisi. Suspendisse varius convallis urna, ac euismod purus auctor
           at
         </Typography>
+        <button onClick={navigateTo}>Read more</button>
       </CardContent>
     </Card>
   );

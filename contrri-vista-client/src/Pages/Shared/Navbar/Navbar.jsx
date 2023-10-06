@@ -14,6 +14,11 @@ const Navbar = () => {
         <div className="nav-div">
           <ul className="nav-ui">
             <li>
+              <Link to="/participants" className="link">
+                Participants
+              </Link>
+            </li>
+            <li>
               <Link to="/participate" className="link">
                 Participate
               </Link>
